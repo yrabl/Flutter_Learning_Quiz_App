@@ -46,7 +46,7 @@ class SummaryScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Your answered $correctAnswersCount out of $totalQuestions questions correctly!',
+              'You answered $correctAnswersCount out of $totalQuestions questions correctly!',
               style: GoogleFonts.lato(
                 fontSize: 20,
                 color: const Color.fromARGB(255, 201, 153, 251),
