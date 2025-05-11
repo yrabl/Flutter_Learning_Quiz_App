@@ -29,7 +29,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
     super.initState();
     currentQuestionData = questions[questionIndex];
     if (currentQuestionData != null) {
-      currentAnswers = currentQuestionData!.getShuffledAnswers();
+      currentAnswers = currentQuestionData!.shuffledAnswers;
     }
   }
 
@@ -45,7 +45,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
       currentUserAnswer = null;
       currentQuestionData = questions[questionIndex];
       if (currentQuestionData != null) {
-        currentAnswers = currentQuestionData!.getShuffledAnswers();
+        currentAnswers = currentQuestionData!.shuffledAnswers;
       }
     });
   }
