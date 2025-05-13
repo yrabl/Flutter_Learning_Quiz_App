@@ -11,7 +11,7 @@ class AnswerButton extends StatelessWidget {
 
   final void Function(String answer) answerQuestion;
   final String currentAnswer;
-  final int currentButtonState; // Using constants defined in styles.dart
+  final AnswerButtonState currentButtonState; // Using constants defined in styles.dart
 
   @override
   Widget build(BuildContext context) {

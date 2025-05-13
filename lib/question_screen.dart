@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app/constants/styles.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/models/quiz_question.dart';
 import 'package:quiz_app/answer_button.dart';
@@ -85,16 +86,16 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
             const SizedBox(height: 10),
             ...currentAnswers.map((answer) {
-              var currentButtonState = 0; // Default button state
+              var currentButtonState = AnswerButtonState.defaultState; // Default button state
               if (currentAnswerState != 0) {
                 if (currentUserAnswer == answer) {
                   if (currentQuestionData!.isCorrectAnswer(answer)) {
-                    currentButtonState = 1; // Correct answer
+                    currentButtonState = AnswerButtonState.correct; // Correct answer
                   } else {
-                    currentButtonState = 2; // Incorrect answer
+                    currentButtonState = AnswerButtonState.incorrect; // Incorrect answer
                   }
                 } else if (currentQuestionData!.isCorrectAnswer(answer)) {
-                  currentButtonState = 1; // Correct answer
+                  currentButtonState = AnswerButtonState.correct; // Correct answer
                 }
               }
               return AnswerButton(

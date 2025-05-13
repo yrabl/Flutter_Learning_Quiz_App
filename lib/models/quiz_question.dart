@@ -2,9 +2,7 @@ class QuizQuestion {
   final String question;
   final List<String> answers;
 
-  const QuizQuestion(String question, List<String> answers)
-      : question = question,
-        answers = answers;
+  const QuizQuestion(this.question, this.answers);
 
   List<String> get shuffledAnswers {
     final shuffledAnswers = List<String>.of(answers);
